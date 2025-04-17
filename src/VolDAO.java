@@ -42,10 +42,10 @@ public class VolDAO {
             ps.setString(3, vol.getVilleArrivee());
 
             ps.executeUpdate();
-            System.out.println("✅ Vol ajouté avec succès.");
+            System.out.println(" Vol ajouté avec succès.");
 
         } catch (SQLException e) {
-            System.out.println("❌ Erreur lors de l'ajout du vol : " + e.getMessage());
+            System.out.println(" Erreur lors de l'ajout du vol : " + e.getMessage());
         }
     }
 
@@ -60,13 +60,13 @@ public class VolDAO {
 
             int updated = ps.executeUpdate();
             if (updated > 0) {
-                System.out.println("✅ Destination mise à jour.");
+                System.out.println(" Destination mise à jour.");
             } else {
-                System.out.println("⚠️ Vol non trouvé.");
+                System.out.println(" Vol non trouvé.");
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ Erreur lors de la modification : " + e.getMessage());
+            System.out.println(" Erreur lors de la modification : " + e.getMessage());
         }
     }
 
@@ -88,7 +88,7 @@ public class VolDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("❌ Erreur lors de la recherche du vol : " + e.getMessage());
+            System.out.println(" Erreur lors de la recherche du vol : " + e.getMessage());
         }
 
         return null;
